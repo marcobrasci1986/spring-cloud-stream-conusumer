@@ -14,10 +14,14 @@ public class EventConsumer {
     @StreamListener(Sink.INPUT)
     public void consumeMessage(PersonCreatedEvent personCreatedEvent) {
         log.info("Received : " + personCreatedEvent);
+
+        // TODO store in EventStore
+        // Add EventHandler to update Database
     }
 
     /**
      * All errors are routed to this channel
+     *
      * @param message
      */
     @StreamListener("errorChannel")
