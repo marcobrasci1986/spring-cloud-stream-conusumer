@@ -1,6 +1,7 @@
 package be.avidoo.sandbox.springcloudstreamconsumer.person.events;
 
 import be.avidoo.sandbox.springcloudstreamconsumer.PersonMother;
+import be.avidoo.sandbox.springcloudstreamconsumer.config.ObjectMapperConfiguration;
 import org.assertj.core.api.Assertions;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -9,10 +10,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.json.JsonTest;
 import org.springframework.boot.test.json.JacksonTester;
 import org.springframework.boot.test.json.JsonContent;
+import org.springframework.context.annotation.Import;
 import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @JsonTest
+@Import(ObjectMapperConfiguration.class)
 public class PersonCreatedEventTest {
 
     private static final PersonCreatedEvent PERSON_CREATED_EVENT = PersonMother.person();
