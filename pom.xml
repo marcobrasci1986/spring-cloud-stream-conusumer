@@ -33,7 +33,7 @@
             <artifactId>spring-cloud-stream-binder-rabbit</artifactId>
         </dependency>
 
-        <!-- Support Java 8 Date-->
+        <!-- Support Java 8 Date: no need for other ObjectMapper configuration-->
         <dependency>
             <groupId>com.fasterxml.jackson.datatype</groupId>
             <artifactId>jackson-datatype-jsr310</artifactId>
