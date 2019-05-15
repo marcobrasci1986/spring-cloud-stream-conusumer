@@ -1,0 +1,3 @@
+mvn dependency:tree -Dincludes=groupId:artifactId
+
+mvn dependency:tree -Dincludes=com.fasterxml.jackson.core:jackson-cor
